@@ -20,7 +20,7 @@
   "code": {
           "coding": [
             {
-                    "system": "http//snomed.info/sct",
+                    "system": "http://snomed.info/sct",
                     "code": "42374007",
                     "display": "Eastern Cooperative Oncology Group Performance Status"
             }
@@ -32,15 +32,10 @@
   "valueCodeableConcept":{
           "coding":[
             {
-                    "system":"http//snomed.info/sct",
+                    "system":"http://snomed.info/sct",
                     "code":"{{code}}",
                     "display":"{{disp_val}}"
             }
           ]
   }
 }
-
-
-
-
-

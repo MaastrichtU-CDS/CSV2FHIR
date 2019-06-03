@@ -20,7 +20,7 @@
   "code": {
           "coding": [
             {
-                    "system": "http//snomed.info/sct",
+                    "system": "http://snomed.info/sct",
                     "code": "313222007",
                     "display": "Forced Expiratory Volume in 1 sec"
             }

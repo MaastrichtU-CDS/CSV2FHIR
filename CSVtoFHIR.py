@@ -1,5 +1,4 @@
 import os
-import csv
 import io
 import sys
 import csv
@@ -103,7 +102,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
     head = None
     resources = []
     bundles = []
-    i = i1 = i2 = i3 = 1
+    i = i1 = i2 = i3 = i4 = 1
     push_to = None  # 'http://localhost:5000/baseDstu3/'
     bundle_per_patient = False
     for row in rawData:
@@ -124,6 +123,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         # Observation - FEV
         fevid = "fev" + data["pat_id"]
         jsonDataObsFev = tpl_obsFev.render(obsFev_id=fevid, pat_id=data['pat_id'], fev_val=data['fev1'])
+
         smokstatid = "smokstat"+data["pat_id"]
         jsonDataObssmok=tpl_obsSmok.render(smok_id=smokstatid, pat_id = data['pat_id'],statCode =data['smok_stat'],disp_text=data['smok-statText'])
 
@@ -148,3 +148,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         with open(path+"/smok{}.json".format(i3),"w") as f3:
             f3.write(jsonDataObssmok)
             i3 = i3+1
+
+        with open(path + "/fev{}.json".format(i3), "w") as f4:
+            f4.write(jsonDataObsFev)
+            i4 = i4+1
