@@ -10,7 +10,7 @@ from flask import Flask, render_template
 import requests
 
 this = os.getcwd()
-keys = ['pat_id', 'gender', 'birthDate', 'deceasedBoolean', 'stage', 'ecog', 'ecogText', 'smok_stat', 'smok-statText','fev1']
+keys = ['pat_id', 'gender', 'birthDate', 'deceasedBoolean', 'stage', 'ecog', 'ecogText', 'smok_stat', 'smok-statText','fev1', 'gtv1']
 fhirDict = OrderedDict().fromkeys(keys, None)
 
 def populate_Data(data, fhirDict):
@@ -90,19 +90,19 @@ def fhir_post_bundle(base_url, bundle):
 tpl_suffix = '-dstu3'
 tplenv = jinja2.Environment(loader=jinja2.FileSystemLoader('%s/templates/' % this))
 tpl_patient = tplenv.get_template('patientRadiotherapy.json')
-tpl_condition = tplenv.get_template('Condition.json')
+tpl_condition = tplenv.get_template('Condition-LungCancer.json')
 tpl_obsBMI = tplenv.get_template('Observation-bmi.json')
 tpl_obsECOG = tplenv.get_template('Observation-ecog.json')
 tpl_obsFev = tplenv.get_template('Observation-fev.json')
 tpl_obsSmok = tplenv.get_template('Observation-Smok.json')
 tpl_bundle = tplenv.get_template('bundle{}.json'.format(tpl_suffix))
-
+tpl_obsTumLoad = tplenv.get_template('Observation-TumLoad.json')
 with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
     rawData = csv.DictReader(CSVFile)
     head = None
     resources = []
     bundles = []
-    i = i1 = i2 = i3 = i4 = 1
+    i = i1 = i2 = i3 = i4 = i5 = 1
     push_to = None  # 'http://localhost:5000/baseDstu3/'
     bundle_per_patient = False
     for row in rawData:
@@ -126,6 +126,10 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
 
         smokstatid = "smokstat"+data["pat_id"]
         jsonDataObssmok=tpl_obsSmok.render(smok_id=smokstatid, pat_id = data['pat_id'],statCode =data['smok_stat'],disp_text=data['smok-statText'])
+
+        obsTumLoad_id = "öbsTumorLoad" + data["pat_id"]
+        tumorload = data['gtv1']
+        jsonDataObsTumLoad = tpl_obsTumLoad.render(obsTumorLoad_id= obsTumLoad_id, value= tumorload)
 
         # jsonDataCondition =tpl_condition.render()
         # resources.append(jsonDataPa
@@ -152,3 +156,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         with open(path + "/fev{}.json".format(i3), "w") as f4:
             f4.write(jsonDataObsFev)
             i4 = i4+1
+
+        with open(path + "/gtv{}.json".format(i3), "w") as f5:
+            f5.write(jsonDataObsTumLoad)
+            i5 = i5+1
