@@ -2742,12 +2742,12 @@
       <change afterPath="$PROJECT_DIR$/Generated/Bundle/smok97.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Generated/Bundle/smok98.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Generated/Bundle/smok99.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Condition-LungCancer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Observation-Histology.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Observation-TumorLoad.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSVtoFHIR.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSVtoFHIR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Condition.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Condition-LungCancer.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Condition-LungCancer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Observation-Histology.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Observation-Histology.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Observation-TNMS.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Observation-TNMS.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Observation-TumorLoad.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Observation-TumLoad.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2757,11 +2757,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSVtoFHIR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="92" column="57" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
+            <state relative-caret-position="195">
+              <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -2772,35 +2772,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Condition-LungCancer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            <state relative-caret-position="238">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Observation-TumorLoad.json">
+        <entry file="file://$PROJECT_DIR$/Stage3_anonymizedConverted.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="152" selection-start-column="148" selection-end-column="152" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Observation-TumLoad.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Observation-Histology.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Observation-TNMS.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="331">
+              <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -2813,6 +2813,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fev1pc_t0</find>
+      <find>gtv1</find>
+    </findStrings>
   </component>
   <component name="Git.Rebase.Settings">
     <option name="ONTO" value="refs/heads/master" />
@@ -2836,16 +2842,16 @@
         <option value="$PROJECT_DIR$/templates/Observation-ecog.json" />
         <option value="$PROJECT_DIR$/templates/Observation-bmi.json" />
         <option value="$PROJECT_DIR$/templates/Observation-Smok.json" />
-        <option value="$PROJECT_DIR$/templates/Observation-fev.json" />
         <option value="$PROJECT_DIR$/templates/Condition.json" />
         <option value="$PROJECT_DIR$/templates/1.json" />
-        <option value="$PROJECT_DIR$/templates/Condition-LungCancer.json" />
         <option value="$PROJECT_DIR$/templates/Observation-TumorLoad.json" />
-        <option value="$PROJECT_DIR$/templates/Observation-Histology.json" />
-        <option value="$PROJECT_DIR$/CSVtoFHIR.py" />
         <option value="$PROJECT_DIR$/templates/Observation-TNMStage1.json" />
         <option value="$PROJECT_DIR$/templates/Observation-TNMStage.json" />
+        <option value="$PROJECT_DIR$/templates/Observation-Histology.json" />
         <option value="$PROJECT_DIR$/templates/Observation-TNMS.json" />
+        <option value="$PROJECT_DIR$/templates/Observation-fev.json" />
+        <option value="$PROJECT_DIR$/templates/Condition-LungCancer.json" />
+        <option value="$PROJECT_DIR$/CSVtoFHIR.py" />
       </list>
     </option>
   </component>
@@ -3061,7 +3067,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559640802102</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Scripts for converting data">
+      <created>1559647850292</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559647850292</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Scripts for converting data">
+      <created>1559647903113</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559647903113</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3077,19 +3097,19 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24438573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24438573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993395" weight="0.3380481" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980185" weight="0.2956153" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497358" visible="true" weight="0.2956153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993395" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49867898" weight="0.3281471" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" visible="true" weight="0.3380481" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50264204" side_tool="true" visible="true" weight="0.2956153" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4980185" weight="0.38189533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -3133,24 +3153,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Observation-fev.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/patientRadiotherapy.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Observation-Smok.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -3169,50 +3175,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
+    <entry file="file://$PROJECT_DIR$/templates/Observation-TNMStage.json" />
+    <entry file="file://$PROJECT_DIR$/templates/Observation-Smok.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Stage3_anonymizedConverted.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="151" selection-start-column="148" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
-    <entry file="file://$PROJECT_DIR$/templates/Observation-TNMStage.json" />
-    <entry file="file://$PROJECT_DIR$/CSVtoFHIR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="92" column="57" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Condition-LungCancer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Observation-TumorLoad.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <caret column="152" selection-start-column="148" selection-end-column="152" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Observation-Histology.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Observation-fev.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Observation-TumLoad.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Observation-TNMS.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="331">
+          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Condition-LungCancer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSVtoFHIR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

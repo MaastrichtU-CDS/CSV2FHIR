@@ -34,19 +34,24 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "{{stagecode}}",
-            "display": "{{stagedisplay}}"
+            "code": "78873005",
+            "display": "T category (observable entity)"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "code": "277206009",
+            "display": "N category (observable entity)"
           }
         ]
     },
   "valueCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "{{code}}",
-        "display": "{{disp_val}}"
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "{{code}}",
+            "display": "{{disp_val}}"
+          }
+        ]
       }
-     ]
-    }
   }
 }

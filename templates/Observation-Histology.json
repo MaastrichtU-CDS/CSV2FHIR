@@ -36,8 +36,8 @@
           "coding":[
             {
                     "system":"https://codes.iarc.fr",
-                    "code":"{{code}}",
-                    "display":"{{disp_val}}"
+                    "code":"{{histcode}}",
+                    "display":"{{histdisp_val}}"
             }
           ]
   }
