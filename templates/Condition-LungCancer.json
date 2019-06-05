@@ -78,17 +78,23 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "{{stagetype}}",
-            "display": "{{stagetypedisp}}"
+            "code": "260998006",
+            "display": "Clinical staging (qualifier value)"
           }
         ]
-      }
+      },
+      "extension" : [{
+          "url" : "http://example.org/fhir/StructureDefinition/ObservationTNMStage",
+          "valueReference": "Observation/{{obsTNMStage_id}}"
+        }]
     }
   ],
-  "extension": {
-    "reference": "Observation/{{obsHist_id}}"
-  },
-  "extension": {
-    "reference": "Observation/{{obsTumLoad_id}}"
-  }
+  "extension" : [{
+          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestHistology",
+          "valueReference": "Observation/{{obsHist_id}}"
+        }],
+  "extension" : [{
+          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestTumorLoad",
+          "valueReference": "Observation/{{obsTumLoad_id}}"
+        }]
 }

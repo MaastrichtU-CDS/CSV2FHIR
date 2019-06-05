@@ -88,8 +88,8 @@ def populate_Data(data, fhirDict):
         fhirDict["Hist"] = "unknown"
         fhirDict["Hist_Text"] = "Unknown"
     else:
-        fhirDict["Hist"] = "not specified"
-        fhirDict["Hist_Text"] = "Not Specified"
+        fhirDict["Hist"] = "385432009"
+        fhirDict["Hist_Text"] = "Not Applicable"
     # tstage - observation
     if data["tstage"] == "1":
         fhirDict["tnmstage"] = "23351008"
@@ -113,8 +113,8 @@ def populate_Data(data, fhirDict):
         fhirDict["tnmstage"] = "unknown"
         fhirDict["tnmstage_text"] = "Unknown"
     else:
-        fhirDict["tnmstage"] = "not specified"
-        fhirDict["tnmstage_text"] = "Not Specified"
+        fhirDict["tnmstage"] = "385432009"
+        fhirDict["tnmstage_text"] = "Not Applicable"
     # Nstage observation
     if data["nstage"] == "1":
         fhirDict["tnmstage"] = "62455006"
@@ -135,9 +135,10 @@ def populate_Data(data, fhirDict):
         fhirDict["tnmstage"] = "unknown"
         fhirDict["tnmstage_text"] = "Unknown"
     else:
-        fhirDict["tnmstage"] = "not specified"
-        fhirDict["tnmstage_text"] = "Not Specified"
+        fhirDict["tnmstage"] = "385432009"
+        fhirDict["tnmstage_text"] = "Not Applicable"
     # Condition Lung Cancer
+    # bodysite
     if data["t_ct_loc"] == "1":
         fhirDict["bodycode"] = "266005"
         fhirDict["bodydisp"] = "Right lower lobe of lung"
@@ -157,47 +158,58 @@ def populate_Data(data, fhirDict):
         fhirDict["bodycode"] = "44714003"
         fhirDict["bodydisp"] = "left upper lobe"
     elif data["t_ct_loc"] == "7":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "not available"
+        fhirDict["bodydisp"] = "Left Hilus"
     elif data["t_ct_loc"] == "8":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "72410000"
+        fhirDict["bodydisp"] = "mediastinum"
     elif data["t_ct_loc"] == "9":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "385432009"
+        fhirDict["bodydisp"] = "not applicable"
     elif data["t_ct_loc"] == "10":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "50837003"
+        fhirDict["bodydisp"] = "Structure of Lingula of Left Lung"
     elif data["t_ct_loc"] == "11":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "45653009"
+        fhirDict["bodydisp"] = "Upper lobe of lung"
     elif data["t_ct_loc"] == "12":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "90572001"
+        fhirDict["bodydisp"] = "Lower lobe of lung"
     elif data["t_ct_loc"] == "13":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "44567001"
+        fhirDict["bodydisp"] = "Trachea"
     elif data["t_ct_loc"] == "14":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "736637009"
+        fhirDict["bodydisp"] = "Structure of Left Bronchus"
     elif data["t_ct_loc"] == "15":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "736638004"
+        fhirDict["bodydisp"] = "Structure of right Bronchus"
     elif data["t_ct_loc"] == "16":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "385432009"
+        fhirDict["bodydisp"] = "Not Applicable (LUL+LLL)"
     elif data["t_ct_loc"] == "17":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "736638004"
+        fhirDict["bodydisp"] = "Right Bronchus"
     elif data["t_ct_loc"] == "18":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "736637009"
+        fhirDict["bodydisp"] = "Left Bronchus"
     elif data["t_ct_loc"] == "19":
-        fhirDict["bodycode"] = ""
-        fhirDict["bodydisp"] = ""
+        fhirDict["bodycode"] = "31094006"
+        fhirDict["bodydisp"] = "Structure Lobe of Lung"
     else:
-        fhirDict["bodycode"] = "not specified"
-        fhirDict["bodydisp"] = "Not Specified"
+        fhirDict["bodycode"] = "385432009"
+        fhirDict["bodydisp"] = "Not Applicable"
+    # stage
+    if data["stage"] == "1":
+        fhirDict["overallstage"] = "73082003"
+        fhirDict["overallstagedisp"] = "Clinical Stage IIIA"
+    elif data["stage"] == "2":
+        fhirDict["overallstage"] = "64062008"
+        fhirDict["overallstagedisp"] = "Clinical Stage IIIB"
+    else:
+        fhirDict["overallstage"] = "385432009"
+        fhirDict["overallstagedisp"] = "Not Applicable"
+
     # Countpetallg
     # countpet_mediast6g
     return fhirDict
@@ -229,7 +241,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
     head = None
     resources = []
     bundles = []
-    i = i1 = i2 = i3 = i4 = i5 = i6 = i7 = 1
+    i = i1 = i2 = i3 = i4 = i5 = i6 = i7 = i8 = 1
     push_to = None  # 'http://localhost:5000/baseDstu3/'
     bundle_per_patient = False
     for row in rawData:
@@ -265,8 +277,8 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
 
         jsonDataObsTNMStage = tpl_obsTNMStage.render(obsTNMStage_id=tnm_id, pat_id=data["pat_id"], code=data["tnmstage"], disp_val=data["tnmstage_text"])
         # Condition Lung Cancer
-        condLuCa_id = "conditionLungCancer" + data["pat_id"]
-        jsondataConditionLungCancer = tpl_ConditionLungCancer.render(condLungCancer_id=condLuCa_id, bodycode=, bodydisp=, pat_id=, encounter_id=, overallstage=, overallstagedisp=, stagetype=, stagetypedisp=)
+        condLungCancer_id = "conditionLungCancer" + data["pat_id"]
+        jsondataConditionLungCancer = tpl_ConditionLungCancer.render(condLungCancer_id=condLungCancer_id, bodycode=data["bodycode"], bodydisp=data["bodydisp"], pat_id=data["pat_id"], encounter_id=data["pat_id"], overallstage=data["overallstage"], overallstagedisp=data["overallstagedisp"],obsTNMStage_id=tnm_id, obsHist_id=hist_id, obsTumLoad_id=tumload_id)
         # jsonDataCondition =tpl_condition.render()
         # resources.append(jsonDataPa
 
@@ -304,3 +316,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         with open(path + "/tnmstage{}.json".format(i7), "w") as f7:
             f7.write(jsonDataObsTNMStage)
             i7 = i7+1
+
+        with open(path + "/condlungcancer{}.json".format(i8), "w") as f8:
+            f8.write(jsondataConditionLungCancer)
+            i8 = i8+1
