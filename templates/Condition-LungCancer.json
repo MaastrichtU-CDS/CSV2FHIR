@@ -84,7 +84,7 @@
         ]
       },
       "extension" : [{
-          "url" : "http://example.org/fhir/StructureDefinition/ObservationTNMStage",
+          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestStageTNM",
           "valueReference": "Observation/{{obsTNMStage_id}}"
         }]
     }
