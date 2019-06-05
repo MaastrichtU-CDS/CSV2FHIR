@@ -10,7 +10,7 @@ from flask import Flask, render_template
 import requests
 
 this = os.getcwd()
-keys = ['pat_id', 'gender', 'birthDate', 'deceasedBoolean', 'stage', 'ecog', 'ecogText', 'smok_stat', 'smok-statText','fev1', "bmi", 'tumorload', 'tnmstage', 'tnmstage_text', "Hist", "Hist_Text"]
+keys = ['pat_id', 'gender', 'birthDate', 'deceasedBoolean', 'stage', 'ecog', 'ecogText', 'smok_stat', 'smok-statText','fev1', "bmi", 'tumorload', 'tnmstage', 'tnmstage_text', "Hist", "Hist_Text", "overallstage", "overallstagedisp", "bodycode", "bodydisp"]
 fhirDict = OrderedDict().fromkeys(keys, None)
 
 def populate_Data(data, fhirDict):
