@@ -29,9 +29,6 @@
   "subject" : {
           "reference": "Patient/{{pat_id}}"
   },
-  "context": {
-          "reference": "Encounter/{{enc_id}}"
-  },
   "valueCodeableConcept":{
           "coding":[
             {

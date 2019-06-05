@@ -27,13 +27,7 @@ def populate_Data(data, fhirDict):
         fhirDict['deceasedBoolean'] = 'true'
     else:
         fhirDict['deceasedBoolean'] = 'false'
-    # Get the Condition/ Stage Information
-    if data['stage'] == '1':
-        fhirDict['stage'] = 'III A'
-    elif data['stage'] == '2':
-        fhirDict['stage'] = 'III B'
-    else:
-        fhirDict['stage'] = 'Not Specified'
+
     # Observation - ECOG Performance Status
     if data['who3g'] == '0':
         fhirDict['ecog'] = '425389002'
@@ -54,7 +48,8 @@ def populate_Data(data, fhirDict):
         fhirDict['ecog'] = '423409001'
         fhirDict['ecogText'] = 'Ecog Performance Status 5'
     else:
-        fhirDict['ecog'] = 'Not Specified'
+        fhirDict['ecog'] = '261665006'
+        fhirDict["ecogText"] = "Unknown"
     # Observation - Smoking Status
     if data['dumsmok2'] == '1':
         fhirDict['smok_stat'] = '446172000'
@@ -63,8 +58,8 @@ def populate_Data(data, fhirDict):
         fhirDict['smok_stat'] = '8392000'
         fhirDict['smok-statText'] = "Current Smoker"
     else:
-        fhirDict['smok_stat'] = 'Not Specified'
-        fhirDict['smok-statText'] = "Not Specified"
+        fhirDict['smok_stat'] = '261665006'
+        fhirDict['smok-statText'] = "Unknown"
     # Observation - BMI
     fhirDict['bmi'] = data['bmi']
     # FEV1
@@ -85,7 +80,7 @@ def populate_Data(data, fhirDict):
         fhirDict["Hist"] = "other"
         fhirDict["Hist_Text"] = "Other"
     elif data["hist4g"] == "0":
-        fhirDict["Hist"] = "unknown"
+        fhirDict["Hist"] = "261665006"
         fhirDict["Hist_Text"] = "Unknown"
     else:
         fhirDict["Hist"] = "385432009"
@@ -110,7 +105,7 @@ def populate_Data(data, fhirDict):
         fhirDict["tnmstage"] = "missing"
         fhirDict["tnmstage_text"] = "Missing"
     elif data["tstage"] == "99":
-        fhirDict["tnmstage"] = "unknown"
+        fhirDict["tnmstage"] = "261665006"
         fhirDict["tnmstage_text"] = "Unknown"
     else:
         fhirDict["tnmstage"] = "385432009"
@@ -132,7 +127,7 @@ def populate_Data(data, fhirDict):
         fhirDict["tnmstage"] = "79420006"
         fhirDict["tnmstage_text"] = "NX"
     elif data["nstage"] == "99":
-        fhirDict["tnmstage"] = "unknown"
+        fhirDict["tnmstage"] = "261665006"
         fhirDict["tnmstage_text"] = "Unknown"
     else:
         fhirDict["tnmstage"] = "385432009"
@@ -197,8 +192,8 @@ def populate_Data(data, fhirDict):
         fhirDict["bodycode"] = "31094006"
         fhirDict["bodydisp"] = "Structure Lobe of Lung"
     else:
-        fhirDict["bodycode"] = "385432009"
-        fhirDict["bodydisp"] = "Not Applicable"
+        fhirDict["bodycode"] = "261665006"
+        fhirDict["bodydisp"] = "Unknown"
     # stage
     if data["stage"] == "1":
         fhirDict["overallstage"] = "73082003"
@@ -207,8 +202,8 @@ def populate_Data(data, fhirDict):
         fhirDict["overallstage"] = "64062008"
         fhirDict["overallstagedisp"] = "Clinical Stage IIIB"
     else:
-        fhirDict["overallstage"] = "385432009"
-        fhirDict["overallstagedisp"] = "Not Applicable"
+        fhirDict["overallstage"] = "261665006"
+        fhirDict["overallstagedisp"] = "Unknown"
 
     # Countpetallg
     # countpet_mediast6g
@@ -236,12 +231,13 @@ tpl_bundle = tplenv.get_template('bundle{}.json'.format(tpl_suffix))
 tpl_obsTumLoad = tplenv.get_template('Observation-TumLoad.json')
 tpl_obsHist = tplenv.get_template("Observation-Histology.json")
 tpl_obsTNMStage = tplenv.get_template("Observation-TNMS.json")
+tpl_Encounter = tplenv.get_template("Encounter.json")
 with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
     rawData = csv.DictReader(CSVFile)
     head = None
     resources = []
     bundles = []
-    i = i1 = i2 = i3 = i4 = i5 = i6 = i7 = i8 = 1
+    i = i1 = i2 = i3 = i4 = i5 = i6 = i7 = i8 = i9 = 1
     push_to = None  # 'http://localhost:5000/baseDstu3/'
     bundle_per_patient = False
     for row in rawData:
@@ -250,9 +246,12 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         # Patient Resources
         jsonDataPat = tpl_patient.render(pat_id=data['pat_id'], gender=data['gender'], birthDate=data['birthDate'],
                                          deceasedBoolean=data['deceasedBoolean'])
+        # Encounter
+        encounter_id = "Encounter/" + data["pat_id"]
+        jsondataEncounter = tpl_Encounter.render(encounter_id=encounter_id, pat_id=data["pat_id"])
 
         # Observation- BMI
-        bmiid = data["pat_id"]
+        bmiid = "bmi" + data["pat_id"]
         jsonDataObsBmi = tpl_obsBMI.render(bmi_id=bmiid, pat_id=data['pat_id'], bmi_val=data['bmi'])
 
         # Observation - ECOG
@@ -270,15 +269,16 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         jsonDataObsTumLoad = tpl_obsTumLoad.render(obsTumLoad_id=tumload_id, value=data["tumorload"], pat_id=data["pat_id"])
         # Observation Histology
         hist_id = "histology" + data["pat_id"]
-        jsonDataObsHist = tpl_obsHist.render(obsHist_id=hist_id, histcode=data["Hist"], histdisp_val=data["Hist_Text"], pat_id=data["pat_id"])
+        jsonDataObsHist = tpl_obsHist.render(obsHist_id=hist_id, histcode=data["Hist"], histdisp_val=data["Hist_Text"], pat_id=data["pat_id"], encounter_id=encounter_id)
 
         # Observation TNMStage
         tnm_id = "TNMStage" + data["pat_id"]
-
         jsonDataObsTNMStage = tpl_obsTNMStage.render(obsTNMStage_id=tnm_id, pat_id=data["pat_id"], code=data["tnmstage"], disp_val=data["tnmstage_text"])
+
         # Condition Lung Cancer
         condLungCancer_id = "conditionLungCancer" + data["pat_id"]
-        jsondataConditionLungCancer = tpl_ConditionLungCancer.render(condLungCancer_id=condLungCancer_id, bodycode=data["bodycode"], bodydisp=data["bodydisp"], pat_id=data["pat_id"], encounter_id=data["pat_id"], overallstage=data["overallstage"], overallstagedisp=data["overallstagedisp"],obsTNMStage_id=tnm_id, obsHist_id=hist_id, obsTumLoad_id=tumload_id)
+        jsondataConditionLungCancer = tpl_ConditionLungCancer.render(condLungCancer_id=condLungCancer_id, bodycode=data["bodycode"], bodydisp=data["bodydisp"], pat_id=data["pat_id"], encounter_id=encounter_id, overallstage=data["overallstage"], overallstagedisp=data["overallstagedisp"],obsTNMStage_id=tnm_id, obsHist_id=hist_id, obsTumLoad_id=tumload_id)
+
         # jsonDataCondition =tpl_condition.render()
         # resources.append(jsonDataPa
 
@@ -320,3 +320,6 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         with open(path + "/condlungcancer{}.json".format(i8), "w") as f8:
             f8.write(jsondataConditionLungCancer)
             i8 = i8+1
+        with open(path + "/encounter{}.json".format(i9), "w") as f9:
+            f9.write(jsondataEncounter)
+            i9 = i9+1

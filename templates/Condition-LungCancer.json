@@ -13,7 +13,8 @@
     "coding": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code": "inactive"
+        "code": "inactive",
+        "display": "Inactive"
       }
     ]
   },
@@ -21,7 +22,8 @@
     "coding": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code": "confirmed"
+        "code": "confirmed",
+        "dsiplay": "Confirmed"
       }
     ]
   },
@@ -60,7 +62,7 @@
   "subject": {
     "reference": "Patient/{{pat_id}}"
   },
-  "encounter": {
+  "Encounter": {
     "reference": "{{encounter_id}}"
   },
   "stage": [
@@ -74,27 +76,18 @@
           }
         ]
       },
-      "type": {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "260998006",
-            "display": "Clinical staging (qualifier value)"
-          }
-        ]
-      },
       "extension" : [{
-          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestStageTNM",
+          "url" : "http://example.org/fhir/StructureDefinition/ExtensionTNMStage",
           "valueReference": "Observation/{{obsTNMStage_id}}"
         }]
     }
   ],
   "extension" : [{
-          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestHistology",
+          "url" : "http://example.org/fhir/StructureDefinition/ExtensionHistology",
           "valueReference": "Observation/{{obsHist_id}}"
         }],
   "extension" : [{
-          "url" : "http://example.org/fhir/StructureDefinition/ObservationTestTumorLoad",
+          "url" : "http://example.org/fhir/StructureDefinition/ExtensionTumorLoad",
           "valueReference": "Observation/{{obsTumLoad_id}}"
         }]
 }
