@@ -247,7 +247,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         jsonDataPat = tpl_patient.render(pat_id=data['pat_id'], gender=data['gender'], birthDate=data['birthDate'],
                                          deceasedBoolean=data['deceasedBoolean'])
         # Encounter
-        encounter_id = "Encounter/" + data["pat_id"]
+        encounter_id = data["pat_id"]
         jsondataEncounter = tpl_Encounter.render(encounter_id=encounter_id, pat_id=data["pat_id"])
 
         # Observation- BMI
