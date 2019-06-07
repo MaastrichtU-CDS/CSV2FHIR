@@ -7,8 +7,10 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Marijn</div>"
   },
+  "clinicalStatus":"active",
+  "verificationStatus":"confirmed",
   "category": [
     {
       "coding": [
@@ -60,16 +62,16 @@
       },
       "extension" : [{
           "url" : "http://localhost:5001/baseDstu3/StructureDefinition/ObservationTestStageTNM",
-          "valueReference": "Observation/{{obsTNMStage_id}}"
+          "valueReference": "Observation/EX{{obsTNMStage_id}}"
         }]
     }
   ],
   "extension" : [{
           "url" : "http://localhost:5001/baseDstu3/StructureDefinition/ObservationTestHistology",
-          "valueReference": "Observation/{{obsHist_id}}"
+          "valueReference": "Observation/EX{{obsHist_id}}"
         }],
   "extension" : [{
           "url" : "http://localhost:5001/baseDstu3/StructureDefinition/ObservationTestTumorLoad",
-          "valueReference": "Observation/{{obsTumLoad_id}}"
+          "valueReference": "Observation/EX{{obsTumLoad_id}}"
         }]
 }

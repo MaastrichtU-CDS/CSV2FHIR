@@ -138,8 +138,8 @@ def populate_Data(data, fhirDict):
         fhirDict["bodycode"] = "266005"
         fhirDict["bodydisp"] = "Right lower lobe of lung"
     elif data["t_ct_loc"] == "2":
-        fhirDict["bodycode"] = "72481006 "
-        fhirDict["bodydisp"] = "Right middle lobe"
+        fhirDict["bodycode"] = "72481006"
+        fhirDict["bodydisp"] = "Right middle lobe of lung"
     elif data["t_ct_loc"] == "3":
         fhirDict["bodycode"] = "not available"
         fhirDict["bodydisp"] = "Right Hilus"

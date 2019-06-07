@@ -2743,6 +2743,8 @@
       <change afterPath="$PROJECT_DIR$/Generated/Bundle/smok98.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Generated/Bundle/smok99.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSVtoFHIR.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSVtoFHIR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Condition-LungCancer.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Condition-LungCancer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2755,8 +2757,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSVtoFHIR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4165">
-              <caret line="245" column="27" selection-start-line="245" selection-start-column="27" selection-end-line="245" selection-end-column="27" />
+            <state relative-caret-position="235">
+              <caret line="140" column="40" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -2767,8 +2769,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Condition-LungCancer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+            <state relative-caret-position="416">
+              <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -2786,6 +2788,7 @@
     <findStrings>
       <find>fev1pc_t0</find>
       <find>gtv1</find>
+      <find>72481006</find>
     </findStrings>
   </component>
   <component name="Git.Rebase.Settings">
@@ -2820,8 +2823,8 @@
         <option value="$PROJECT_DIR$/templates/Observation-TumLoad.json" />
         <option value="$PROJECT_DIR$/templates/Observation-Histology.json" />
         <option value="$PROJECT_DIR$/templates/Encounter.json" />
-        <option value="$PROJECT_DIR$/CSVtoFHIR.py" />
         <option value="$PROJECT_DIR$/templates/Condition-LungCancer.json" />
+        <option value="$PROJECT_DIR$/CSVtoFHIR.py" />
       </list>
     </option>
   </component>
@@ -3093,7 +3096,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559806917939</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Scripts for converting data">
+      <created>1559892818100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1559892818100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3107,20 +3117,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24438573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993395" weight="0.3380481" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4953765" weight="0.2956153" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.494716" weight="0.2956153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49867898" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980185" weight="0.3281471" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50462353" side_tool="true" visible="true" weight="0.2956153" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.505284" side_tool="true" visible="true" weight="0.2956153" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4980185" weight="0.38189533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -3239,15 +3250,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Condition-LungCancer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+        <state relative-caret-position="416">
+          <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CSVtoFHIR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4165">
-          <caret line="245" column="27" selection-start-line="245" selection-start-column="27" selection-end-line="245" selection-end-column="27" />
+        <state relative-caret-position="235">
+          <caret line="140" column="40" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
