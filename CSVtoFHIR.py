@@ -268,7 +268,7 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         tumload_id = "TumorLoad" + data["pat_id"]
         jsonDataObsTumLoad = tpl_obsTumLoad.render(obsTumLoad_id=tumload_id, value=data["tumorload"], pat_id=data["pat_id"])
         # Observation Histology
-        hist_id = "histology" + data["pat_id"]
+        hist_id = "Histology" + data["pat_id"]
         jsonDataObsHist = tpl_obsHist.render(obsHist_id=hist_id, histcode=data["Hist"], histdisp_val=data["Hist_Text"], pat_id=data["pat_id"], encounter_id=encounter_id)
 
         # Observation TNMStage

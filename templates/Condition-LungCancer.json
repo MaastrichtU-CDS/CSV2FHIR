@@ -44,7 +44,7 @@
   "subject": {
     "reference": "Patient/{{pat_id}}"
   },
-  "encounter": {
+  "context": {
     "reference": "Encounter/{{encounter_id}}"
   },
   "stage": [
