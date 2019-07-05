@@ -167,12 +167,12 @@ collaborations:
           
   - name: CORAL
     participants:
-      - MAASTRO  - Test
+      - MAASTRO-Test
       - MAASTRO
       - Hospital Israelita Albert Einstein
       
-  - name: PHT Group
+  - name: PHTGroup
     participants:
-      - MAASTRO - Test
+      - MAASTRO-Test
       - MAASTRO
       - LUMC
