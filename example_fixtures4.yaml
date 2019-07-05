@@ -93,70 +93,70 @@ organizations:
         roles:     "user"         
     
   - name:       Hospital Israelita Albert Einstein
-        domain:     einstein.br
-        address1:   Albert Einstein Avenue, 627
-        address2:   Jardim Leonor, SãoPaulo-SP
-        zipcode:    05652-900
-        country:    Brazil
-        users:
-            - username: michel.fornaciali 
-                firstname: Michel
-                lastname: Fornaciali
-                password: password
-                roles: "admin"
-            - username: andrew.dadario
-                firstname: Andrew
-                lastname: Dadario
-                password: password
-                roles: "user"
-            - username: andrea.suman
-                firstname: Andrea
-                lastname: Suman
-                password: password
-                roles: "user" 
-            - username: edson.amaro
-                firstname: Edson
-                lastname: Amaro
-                password: password
-                roles: "user"
-            - username: fausto.konishi
-                firstname: Fausto
-                lastname: Konishi
-                password: password
-                roles: "user"
-            - username: jose.bittencourt
-                firstname: Jose
-                lastname: Bittencourt
-                password: password
-                roles: "user"
-            - username: rodrigo.ferreiera
-                firstname: Rodrigo
-                lastname: Ferreira
-                password: password
-                roles: "user"
-                
+    domain:     einstein.br
+    address1:   Albert Einstein Avenue, 627
+    address2:   Jardim Leonor, SãoPaulo-SP
+    zipcode:    05652-900
+    country:    Brazil
+    users:
+      - username: michel.fornaciali 
+        firstname: Michel
+        lastname: Fornaciali
+        password: password
+        roles: "admin"
+      - username: andrew.dadario
+        firstname: Andrew
+        lastname: Dadario
+        password: password
+        roles: "user"
+      - username: andrea.suman
+        firstname: Andrea
+        lastname: Suman
+        password: password
+        roles: "user" 
+      - username: edson.amaro
+        firstname: Edson
+        lastname: Amaro
+        password: password
+        roles: "user"
+      - username: fausto.konishi
+        firstname: Fausto
+        lastname: Konishi
+        password: password
+        roles: "user"
+      - username: jose.bittencourt
+        firstname: Jose
+        lastname: Bittencourt
+        password: password
+        roles: "user"
+      - username: rodrigo.ferreiera
+        firstname: Rodrigo
+        lastname: Ferreira
+        password: password
+        roles: "user"
+              
   - name:       LUMC
-        domain:     lumc.nl
-        address1:   Albinusdreef 2
-        address2:   
-        zipcode:    
-        country:    Netherlands
-        users:
-            - username: kees.burger
-                firstname: kees
-                lastname: burger
-                password: password
-                roles: "admin"
-            - username: mark.thompson
-                firstname: mark
-                lastname: thompson
-                password: password
-                roles: "admin"
-            - username: rajaram
-                firstname: rajaram
-                lastname: rajaram
-                password: password
-                roles: "admin"
+    domain:     lumc.nl
+    address1:   Albinusdreef 2
+    address2:   
+    zipcode:    
+    country:    Netherlands
+    users:
+      - username: kees.burger
+        firstname: kees
+        lastname: burger
+        password: password
+        roles: "admin"
+      - username: mark.thompson
+        firstname: mark
+        lastname: thompson
+        password: password
+        roles: "admin"
+      - username: rajaram
+        firstname: rajaram
+        lastname: rajaram
+        password: password
+        roles: "admin"
 
 collaborations:
   - name: atomCAT
