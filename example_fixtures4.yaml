@@ -55,44 +55,44 @@ organizations:
         lastname: Kalendralis
         password: password
         roles: "user" 
-  
-  - name:       Oslo University Hospital
+        
+  - name:       OsloUniversityHospital
     domain:     ous.no
     address1:   Dept of Radiotherapy
     address2:   Kirkeveien 166 Ullevaal Oslo
     zipcode:    0450
     country:    Norway
     users:
-      - username: atomCAT_admin@ous-hf.no
+      - username:  atomCAT_admin@ous-hf
         firstname: admin
-        lastname: atomCAT
-        password: atomCATOslo
-        roles: "admin"
-      - username: peloen@ous-hf.no
+        lastname:  atomCAT
+        password:  atomCATOslo
+        roles:     "admin"
+      - username:  peloen@ous-hf
         firstname: Per-Ivar
         lastname: Loenne
         password: atomCATOslo
-        roles: "user"       
-    
-    - name:       Leeds Teaching Hospitals
-        domain:     nhs.net
-        address1:   Dept of Radiotherapy
-        address2:   
-        zipcode:    
-        country:    United Kingdom
-        users:
-            - username: atomCAT_admin@nhs.net
-                firstname: admin
-                lastname: atomCAT
-                password: atomCATLeeds
-                roles: "admin"
-            - username: ane.appelt@nhs.net
-                firstname: Ane
-                lastname: Appelt
-                password: atomCATLeeds
-                roles: "user"
+        roles: "user"  
 
-    - name:       Hospital Israelita Albert Einstein
+  - name:       LeedsTeachingHospitals
+    domain:     nhs.net
+    address1:   Dept of Radiotherapy
+    address2:   
+    zipcode:    
+    country:    United Kingdom
+    users:
+      - username:  atomCAT_admin@nhs.net
+        firstname: admin
+        lastname:  atomCAT
+        password:  atomCATLeeds
+        roles:     "admin" 
+      - username:  anne.appelt@nhs.net
+        firstname: Ane
+        lastname:  Appelt
+        password:  atomCATLeeds
+        roles:     "user"         
+    
+    - name:       HospitalIsraelitaAlbertEinstein
         domain:     einstein.br
         address1:   Albert Einstein Avenue, 627
         address2:   Jardim Leonor, SãoPaulo-SP
@@ -162,14 +162,14 @@ collaborations:
   - name: atomCAT
     participants:
       - MAASTRO
-      - Oslo University Hospital
-      - Leeds Teaching Hospitals
+      - OsloUniversityHospital
+      - LeedsTeachingHospitals
           
   - name: CORAL
     participants:
       - MAASTRO  - Test
       - MAASTRO
-      - Hospital Israelita Albert Einstein
+      - HospitalIsraelitaAlbertEinstein
       
   - name: PHT Group
     participants:
