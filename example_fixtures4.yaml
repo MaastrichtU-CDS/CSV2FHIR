@@ -56,7 +56,7 @@ organizations:
         password: password
         roles: "user" 
         
-  - name:       OsloUniversityHospital
+  - name:       Oslo University Hospital
     domain:     ous.no
     address1:   Dept of Radiotherapy
     address2:   Kirkeveien 166 Ullevaal Oslo
@@ -74,7 +74,7 @@ organizations:
         password: atomCATOslo
         roles: "user"  
 
-  - name:       LeedsTeachingHospitals
+  - name:       Leeds Teaching Hospitals
     domain:     nhs.net
     address1:   Dept of Radiotherapy
     address2:   
@@ -92,7 +92,7 @@ organizations:
         password:  atomCATLeeds
         roles:     "user"         
     
-    - name:       HospitalIsraelitaAlbertEinstein
+  - name:       Hospital Israelita Albert Einstein
         domain:     einstein.br
         address1:   Albert Einstein Avenue, 627
         address2:   Jardim Leonor, SãoPaulo-SP
@@ -135,7 +135,7 @@ organizations:
                 password: password
                 roles: "user"
                 
-    - name:       LUMC
+  - name:       LUMC
         domain:     lumc.nl
         address1:   Albinusdreef 2
         address2:   
@@ -162,14 +162,14 @@ collaborations:
   - name: atomCAT
     participants:
       - MAASTRO
-      - OsloUniversityHospital
-      - LeedsTeachingHospitals
+      - Oslo University Hospital
+      - Leeds Teaching Hospitals
           
   - name: CORAL
     participants:
       - MAASTRO  - Test
       - MAASTRO
-      - HospitalIsraelitaAlbertEinstein
+      - Hospital Israelita Albert Einstein
       
   - name: PHT Group
     participants:
