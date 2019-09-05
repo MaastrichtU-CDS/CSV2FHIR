@@ -45,8 +45,7 @@ organizations:
         lastname:   rajaram
         password:   password
         roles:      "admin"
-		
-  
+	
   - name:       MAASTRO01
     domain:     maastro.nl
     address1:   Dr. Tanslaan 12
@@ -84,7 +83,7 @@ organizations:
         lastname:  Kalendralis
         password:  password
         roles:     "user"      
-        
+	
 collaborations:
       
   - name: PHTGroup
