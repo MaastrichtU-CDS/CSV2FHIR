@@ -22,7 +22,7 @@ organizations:
         lastname:   rajaram
         password:   password
         roles:      "admin"
-		
+	
   - name:       LUMC02
     domain:     lumc.nl
     address1:   Albinusdreef 2
@@ -82,10 +82,9 @@ organizations:
         firstname: Petros
         lastname:  Kalendralis
         password:  password
-        roles:     "user"      
-	
+        roles:     "user"      	
+
 collaborations:
-      
   - name: PHTGroup
     participants:
       - MAASTRO01
