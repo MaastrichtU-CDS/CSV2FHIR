@@ -22,7 +22,6 @@ organizations:
         lastname:   rajaram
         password:   password
         roles:      "admin"
-	
   - name:       LUMC02
     domain:     lumc.nl
     address1:   Albinusdreef 2
@@ -45,7 +44,6 @@ organizations:
         lastname:   rajaram
         password:   password
         roles:      "admin"
-	
   - name:       MAASTRO01
     domain:     maastro.nl
     address1:   Dr. Tanslaan 12
