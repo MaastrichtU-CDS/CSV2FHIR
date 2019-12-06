@@ -1,0 +1,58 @@
+organizations:
+  
+  - name:       MAASTRO
+    domain:     maastro.nl
+    address1:   Dr. Tanslaan 12
+    address2:   
+    zipcode:    6229 ET
+    country:    Netherlands
+    users:
+      - username: root
+        firstname: root
+        lastname: root
+        password: password
+        roles: "root"
+      - username: johan.vansoest
+        firstname: Johan
+        lastname: van Soest
+        password: password
+        roles: "admin"
+      - username: ananya.choudhury
+        firstname: Ananya
+        lastname: Choudhury
+        password: password
+        roles: "admin"
+      - username: inigo.bermejo
+        firstname: Inigo
+        lastname: Bermejo
+        password: password
+      - username: stuti.nayak
+        firstname: Stuti
+        lastname: Nayak
+        password: password
+
+  - name:       Maastricht_Studie
+    domain:     small-organization.example
+    address1:   n.a.
+    address2:   
+    zipcode:    6221ET
+    country:    Netherlands
+    users:
+      - username: admin@small-organization.example
+        firstname: admin
+        lastname: robot
+        password: password
+        roles: "admin"
+      - username: stan
+        firstname: Stan
+        lastname: the man
+        password: password
+        roles: "user"
+      
+collaborations:
+  - name: Memorabel
+    participants:
+      - MAASTRO
+      - Maastricht_Studie
+    tasks: ["hello-world"]
+
