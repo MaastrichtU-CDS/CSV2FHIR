@@ -1,0 +1,75 @@
+organizations:  
+
+  - name:       Trimbos
+    domain:     Trimbos.nl
+    address1:   
+    address2:   
+    zipcode:    
+    country:    Netherlands
+    users:
+      - username:   be.wijnen
+        firstname:  ben
+        lastname:   wijnen
+        password:   password
+        roles:      "admin"
+      - username:   joran.lokkerbol
+        firstname:  joran
+        lastname:   lokkerbol
+        password:   password
+        roles:      "admin"
+      - username:   trimbos.admin
+        firstname:  trimbos
+        lastname:   admin
+        password:   password
+        roles:      "admin"
+		
+  - name:       Inigo_TestNode
+    domain:     maastro.nl
+    address1:  
+    address2:   
+    zipcode:    
+    country:    Netherlands
+    users:
+      - username:   inigo.bermejo.test
+        firstname:  inigo
+        lastname:   bermejo
+        password:   password
+        roles:      "admin"
+      - username:   inigo.bermejo.admin
+        firstname:  inigo
+        lastname:   bermejo
+        password:   password
+        roles:      "admin"
+		
+  
+  - name:       MAASTRO02
+    domain:     maastro.nl
+    address1:   Dr. Tanslaan 12
+    address2:   
+    zipcode:    6229 ET
+    country:    Netherlands
+    users:
+      - username:  inigo.bermejo
+        firstname: inigo
+        lastname:  bermejo
+        password:  password
+        roles:     "admin"
+      - username:  johan.vansoest2
+        firstname: johan
+        lastname:  vansoest
+        password:  password
+        roles:     "admin"
+      - username:  maastro2.admin
+        firstname: maastro2
+        lastname:  admin
+        password:  password
+        roles:     "admin"
+      
+        
+collaborations:
+      
+  - name: Maastro_Trimbos
+    participants:
+      - Trimbos
+      - Inigo_TestNode
+      - MAASTRO2
