@@ -282,44 +282,46 @@ with io.open('Stage3_anonymizedConverted.csv', 'r') as CSVFile:
         # jsonDataCondition =tpl_condition.render()
         # resources.append(jsonDataPa
 
-        file = "\Generated\Bundle"
-        path = os.getcwd()+file
+        path = os.path.join(os.getcwd(), "generated")
 
-        with open(path+"/patient{}.json".format(i),"w") as f:
+        if not os.path.exists(path):
+            os.mkdir(path)
+
+        with open(os.path.join(path, "patient{}.json".format(i)),"w") as f:
             f.write(jsonDataPat)
             i = i+1
 
-        with open(path+"/bmi{}.json".format(i1),"w") as f1:
+        with open(os.path.join(path, "bmi{}.json".format(i1)),"w") as f1:
             f1.write(jsonDataObsBmi)
             i1 = i1+1
 
-        with open(path+"/ecog{}.json".format(i2),"w") as f2:
+        with open(os.path.join(path, "ecog{}.json".format(i2)),"w") as f2:
             f2.write(jsonDataObsEcog)
             i2 = i2+1
 
-        with open(path+"/smok{}.json".format(i3),"w") as f3:
+        with open(os.path.join(path, "smok{}.json".format(i3)),"w") as f3:
             f3.write(jsonDataObssmok)
             i3 = i3+1
 
-        with open(path + "/fev{}.json".format(i4), "w") as f4:
+        with open(os.path.join(path, "fev{}.json".format(i4)), "w") as f4:
             f4.write(jsonDataObsFev)
             i4 = i4+1
 
-        with open(path + "/gtv{}.json".format(i5), "w") as f5:
+        with open(os.path.join(path, "gtv{}.json".format(i5)), "w") as f5:
             f5.write(jsonDataObsTumLoad)
             i5 = i5+1
 
-        with open(path + "/hist{}.json".format(i6), "w") as f6:
+        with open(os.path.join(path, "hist{}.json".format(i6)), "w") as f6:
             f6.write(jsonDataObsHist)
             i6 = i6+1
 
-        with open(path + "/tnmstage{}.json".format(i7), "w") as f7:
+        with open(os.path.join(path, "tnmstage{}.json".format(i7)), "w") as f7:
             f7.write(jsonDataObsTNMStage)
             i7 = i7+1
 
-        with open(path + "/condlungcancer{}.json".format(i8), "w") as f8:
+        with open(os.path.join(path, "condlungcancer{}.json".format(i8)), "w") as f8:
             f8.write(jsondataConditionLungCancer)
             i8 = i8+1
-        with open(path + "/encounter{}.json".format(i9), "w") as f9:
+        with open(os.path.join(path, "encounter{}.json".format(i9)), "w") as f9:
             f9.write(jsondataEncounter)
             i9 = i9+1
